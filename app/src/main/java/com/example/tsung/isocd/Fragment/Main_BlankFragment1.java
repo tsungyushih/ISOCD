@@ -19,12 +19,12 @@ import com.example.tsung.isocd.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Main3_BlankFragment1.OnFragmentInteractionListener} interface
+ * {@link Main_BlankFragment1.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Main3_BlankFragment1#newInstance} factory method to
+ * Use the {@link Main_BlankFragment1#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Main3_BlankFragment1 extends Fragment {
+public class Main_BlankFragment1 extends Fragment {
     WebView wv;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -38,7 +38,7 @@ public class Main3_BlankFragment1 extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Main3_BlankFragment1() {
+    public Main_BlankFragment1() {
         // Required empty public constructor
     }
 
@@ -48,11 +48,11 @@ public class Main3_BlankFragment1 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Main3_BlankFragment1.
+     * @return A new instance of fragment Main_BlankFragment1.
      */
     // TODO: Rename and change types and number of parameters
-    public static Main3_BlankFragment1 newInstance(String param1, String param2) {
-        Main3_BlankFragment1 fragment = new Main3_BlankFragment1();
+    public static Main_BlankFragment1 newInstance(String param1, String param2) {
+        Main_BlankFragment1 fragment = new Main_BlankFragment1();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -73,7 +73,7 @@ public class Main3_BlankFragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main3__blank_fragment1, container, false);
+        return inflater.inflate(R.layout.fragment_main__blank_fragment1, container, false);
 
     }
 
@@ -122,7 +122,7 @@ public class Main3_BlankFragment1 extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         //findViewByID時,必須先呼叫getView()取得Fragment的View物件才能呼叫findViewByID
-        wv=getView().findViewById(R.id.webView);
+        wv=getView().findViewById(R.id.webView1);
         wv.setWebViewClient(new WebViewClient() {
             @Override
             public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {

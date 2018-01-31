@@ -5,6 +5,8 @@ import android.content.Context;
 import android.net.Uri;
 import android.net.http.SslError;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -128,5 +130,10 @@ public class Main_BlankFragment3 extends Fragment {
         });
         wv.getSettings().setJavaScriptEnabled(true);
         wv.loadUrl("https://www.dgpa.gov.tw/typh/daily/nds.html?uid=31");
+
+
+
     }
+
+
 }

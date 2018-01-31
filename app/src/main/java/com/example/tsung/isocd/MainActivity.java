@@ -8,7 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.example.tsung.isocd.Fragment.Main3_BlankFragment1;
+import com.example.tsung.isocd.Fragment.Main_BlankFragment;
+import com.example.tsung.isocd.Fragment.Main_BlankFragment1;
+import com.example.tsung.isocd.Fragment.Main_BlankFragment2;
 import com.example.tsung.isocd.Fragment.Main_BlankFragment3;
 
 
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> arraylist = new ArrayList<>();
         arraylist.add("地震情報");
         arraylist.add("颱風警報");
-        arraylist.add("AQI空氣品質指標");
+        arraylist.add("空氣品質預報與紫外線即時觀測");
         arraylist.add("停班停課資訊");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
@@ -42,10 +44,20 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (i)
                 {
+                    case 0:
+                        FragmentTransaction ft = getFragmentManager().beginTransaction();
+                        ft.replace(R.id.layout1, new Main_BlankFragment());
+                        ft.commit();
+                        break;
                     case 1:
                         FragmentTransaction ft1 = getFragmentManager().beginTransaction();
-                        ft1.replace(R.id.layout1, new Main3_BlankFragment1());
+                        ft1.replace(R.id.layout1, new Main_BlankFragment1());
                         ft1.commit();
+                        break;
+                    case 2:
+                        FragmentTransaction ft2 = getFragmentManager().beginTransaction();
+                        ft2.replace(R.id.layout1,new Main_BlankFragment2());
+                        ft2.commit();
                         break;
                     case 3:
                         FragmentTransaction ft3 = getFragmentManager().beginTransaction();

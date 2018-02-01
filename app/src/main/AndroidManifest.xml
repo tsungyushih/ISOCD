@@ -5,7 +5,7 @@
     <application
         android:screenOrientation="portrait"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/p1"
         android:label="綜合災害情報站"
         android:roundIcon="@drawable/p1"
         android:supportsRtl="true"

@@ -82,14 +82,14 @@ public class MyHandler extends DefaultHandler { //自己創一個MyHandler Class
                 {
                     String str = descSB.toString();
                     Log.d("NET", "end Element str:" + str);
-                    Pattern pattern = Pattern.compile("http.*jpg");
+                    Pattern pattern = Pattern.compile("http.*g");
                     Matcher m = pattern.matcher(str);
                     String imgurl = "";
                     if (m.find())
                     {
                         imgurl = m.group(0);
                     }
-                    str = str.replaceAll("<img.*/>", "");
+                    str = str.replaceAll("<img.*>", "");
                     item.description = str;
                     item.imgurl = imgurl;
                     Log.d("NET", "In Handler: Item.desc:" + item.description);

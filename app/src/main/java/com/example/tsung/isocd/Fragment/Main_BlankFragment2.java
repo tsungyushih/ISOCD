@@ -209,7 +209,8 @@ public class Main_BlankFragment2 extends Fragment {
 
                             iv.setImageBitmap(bmp);
                             iv2.setImageBitmap(bmp2);
-
+                            iv.setVisibility(View.VISIBLE);
+                            iv2.setVisibility(View.VISIBLE);
                         }
                     });
 
